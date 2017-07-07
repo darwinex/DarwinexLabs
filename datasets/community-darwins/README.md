@@ -25,7 +25,7 @@ Scores:
 12) La - Loss Aversion
 13) Pf - Performance
 14) Cp – Capacity
-15) D-Score
+15) Ds - D-Score
 
 For more detail on each of the above features, please visit: https://www.darwinex.com/education
 
