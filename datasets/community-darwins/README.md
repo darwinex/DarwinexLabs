@@ -13,7 +13,7 @@ Filename Conventions:
 --
 Filenames for datasets in this directory have the following format:
 
-DARWIN-TICKER . TIMEFRAME . LATEST-UPDATE
+DARWIN-TICKER . TIMEFRAME . DATATYPE . LATEST-UPDATE
 
 For example, if a file is named "DWC.4.20.D1.QUOTES.06.July.2017", it contains:
 
