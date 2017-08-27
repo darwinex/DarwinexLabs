@@ -1,7 +1,7 @@
 #+------------------------------------------------------------------+
 #|                                          ZeroMQ_MT4_R_Template.R |
-#|                 Copyright 2017, Darwinex Labs (www.darwinex.com) |
-#|                                             https://www.mql5.com |
+#|                                    Copyright 2017, Darwinex Labs |
+#|                                        https://www.darwinex.com/ |
 #+------------------------------------------------------------------+
 
 library(rzmq)
