@@ -57,11 +57,10 @@ int OnInit()
    repSocket.setLinger(1000);  // 1000 milliseconds
    
    /* 
-      If we initiate socket.send() without having a corresponding 'puller' socket 
-      draining the queue, we'll eat up memory as the 'pusher' just keeps enqueueing messages.
+      If we initiate socket.send() without having a corresponding socket draining the queue, 
+      we'll eat up memory as the socket just keeps enqueueing messages.
       
-      So how many messages do we want ZeroMQ to buffer in RAM before blocking the 'pushing' 
-      socket?
+      So how many messages do we want ZeroMQ to buffer in RAM before blocking the socket?
    */
    repSocket.setSendHighWaterMark(5);     // 5 messages only.
 //---
