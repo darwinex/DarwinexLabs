@@ -4,6 +4,7 @@
 #|                                        https://www.darwinex.com/ |
 #+------------------------------------------------------------------+
 
+# Load "rzmq" library. If not installed, run install.packages("rzmq")
 library(rzmq)
 
 # Random placeholder for PULL later.
