@@ -37,16 +37,16 @@ remote.pull <- function(pSocket) {
 # CREATE ZeroMQ Context
 context = init.context()
 
-# Create ZeroMQ REQ Socket
+# Initialize ZeroMQ REQ Socket
 reqSocket = init.socket(context,"ZMQ_REQ")
 
-# Create ZeroMQ PULL Socket
+# Initialize ZeroMQ PULL Socket
 pullSocket = init.socket(context, "ZMQ_PULL")
 
-# Connect to REQ Socket
+# Connect to REQ Socket on port 5555
 connect.socket(reqSocket,"tcp://localhost:5555")
 
-# Connect to PULL Socket
+# Connect to PULL Socket on port 5556
 connect.socket(pullSocket,"tcp://localhost:5556")
 
 # Run Tests
