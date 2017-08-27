@@ -146,9 +146,9 @@ void InterpretZmqMessage(Socket &pSocket, string& compArray[]) {
    
    // 1) Trading
    // TRADE|ACTION|TYPE|SYMBOL|PRICE|SL|TP|COMMENT|TICKET
-   // e.g. TRADE|OPEN|1|EURUSD|0|50|50|R-to-MetaTrader4|91823098
+   // e.g. TRADE|OPEN|1|EURUSD|0|50|50|R-to-MetaTrader4|12345678
    
-   // The 91823098 at the end is the ticket ID, for MODIFY and CLOSE.
+   // The 12345678 at the end is the ticket ID, for MODIFY and CLOSE.
    
    // 2) Data Requests
    
