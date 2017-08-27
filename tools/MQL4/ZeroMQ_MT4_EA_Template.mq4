@@ -8,6 +8,7 @@
 #property version   "1.00"
 #property strict
 
+// Required: MQL-ZMQ from https://github.com/dingmaotu/mql-zmq
 #include <Zmq/Zmq.mqh>
 
 extern string PROJECT_NAME = "DWX_ZeroMQ_Example";
