@@ -68,7 +68,7 @@ while(TRUE) {
   # e.g. RATES|EURUSD -> Retrieves Current Bid/Ask for EURUSD from MT4.
   mt4.command <- readLines(f, n=1)
   
-  if(tolower(mt4.command)=="q"){
+  if(tolower(mt4.command) == "q") {
     break
   }
   
