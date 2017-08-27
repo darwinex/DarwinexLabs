@@ -80,7 +80,7 @@ void OnDeinit(const int reason)
    
 }
 //+------------------------------------------------------------------+
-//| Expert tick function                                             |
+//| Expert timer function                                            |
 //+------------------------------------------------------------------+
 void OnTimer()
 {
