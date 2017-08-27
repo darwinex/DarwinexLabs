@@ -55,6 +55,7 @@ int OnInit()
        Maximum amount of time in milliseconds that the thread will try to send messages 
        after its socket has been closed (the default value of -1 means to linger forever):
    */
+   
    repSocket.setLinger(1000);  // 1000 milliseconds
    
    /* 
@@ -63,7 +64,9 @@ int OnInit()
       
       So how many messages do we want ZeroMQ to buffer in RAM before blocking the socket?
    */
+   
    repSocket.setSendHighWaterMark(5);     // 5 messages only.
+   
 //---
    return(INIT_SUCCEEDED);
   }
@@ -132,7 +135,7 @@ ZmqMsg MessageHandler(ZmqMsg &request) {
       
    }
    else {
-      // Print("No data received.. please send again?");
+      // NO DATA RECEIVED
    }
    
    return(reply);
@@ -261,13 +264,6 @@ void InterpretZmqMessage(Socket &pSocket, string& compArray[]) {
       default: 
          break;
    }
-   
-   /*
-   if(StringFind(dataStr, "RATES", 0) != -1) {
-         Print("Received: " + dataStr);
-          // SendBidAsk(&socket);
-      }
-   */
 }
 
 // Parse Zmq Message
@@ -297,6 +293,8 @@ string GetBidAsk(string symbol) {
 
 // Inform Client
 void InformPullClient(Socket& pushSocket, string message) {
+
    ZmqMsg pushReply(StringFormat("%s", message));
    pushSocket.send(pushReply,true,false);
+   
 }
