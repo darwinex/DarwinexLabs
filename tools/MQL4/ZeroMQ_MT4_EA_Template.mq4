@@ -42,7 +42,7 @@ int OnInit()
   {
 //---
 
-   EventSetMillisecondTimer(MILLISECOND_TIMER);     // Set 5ms Timer to get client socket input
+   EventSetMillisecondTimer(MILLISECOND_TIMER);     // Set Millisecond Timer to get client socket input
    
    Print("[REP] Binding MT4 Server to Socket on Port " + REP_PORT + "..");   
    Print("[PUSH] Binding MT4 Server to Socket on Port " + PUSH_PORT + "..");
