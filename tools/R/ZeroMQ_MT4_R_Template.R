@@ -33,13 +33,22 @@ remote.pull <- function(pSocket) {
   return(msg)
 }
 
+# CREATE ZeroMQ Context
 context = init.context()
+
+# Create ZeroMQ REQ Socket
 reqSocket = init.socket(context,"ZMQ_REQ")
+
+# Create ZeroMQ PULL Socket
 pullSocket = init.socket(context, "ZMQ_PULL")
 
+# Connect to REQ Socket
 connect.socket(reqSocket,"tcp://localhost:5555")
+
+# Connect to PULL Socket
 connect.socket(pullSocket,"tcp://localhost:5556")
 
+# Run Tests
 while(TRUE) {
   
   # REMEMBER: If the data you're pulling isn't "downloaded" in MT4's History Centre,
