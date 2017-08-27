@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //|                                                ZeroMQ_MT4_EA.mq4 |
-//|                 Copyright 2017, Darwinex Labs (www.darwinex.com) |
+//|                                    Copyright 2017, Darwinex Labs |
 //|                                        https://www.darwinex.com/ |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2017, Darwinex Labs (www.darwinex.com)"
+#property copyright "Copyright 2017, Darwinex Labs."
 #property link      "https://www.darwinex.com/"
 #property version   "1.00"
 #property strict
