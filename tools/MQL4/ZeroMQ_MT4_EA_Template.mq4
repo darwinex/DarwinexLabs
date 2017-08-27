@@ -1,7 +1,7 @@
 //+------------------------------------------------------------------+
 //|                                                ZeroMQ_MT4_EA.mq4 |
 //|                 Copyright 2017, Darwinex Labs (www.darwinex.com) |
-//|                                             https://www.mql5.com |
+//|                                        https://www.darwinex.com/ |
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2017, Darwinex Labs (www.darwinex.com)"
 #property link      "https://www.darwinex.com/"
