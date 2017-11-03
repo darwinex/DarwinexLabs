@@ -295,6 +295,9 @@ string GetBidAsk(string symbol) {
 void InformPullClient(Socket& pushSocket, string message) {
 
    ZmqMsg pushReply(StringFormat("%s", message));
-   pushSocket.send(pushReply,true,false);
+   // pushSocket.send(pushReply,true,false);
+   
+   pushSocket.send(pushReply,true); // NON-BLOCKING
+   // pushSocket.send(pushReply,false); // BLOCKING
    
 }
