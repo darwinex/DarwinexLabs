@@ -35,11 +35,13 @@ Filenames for datasets in this directory have the following format:
 
 DARWIN-TICKER . TIMEFRAME . DATATYPE . LATEST-UPDATE
 
-For example, if a file is named "DWC.4.20.D1.QUOTES.06.July.2017", it contains:
+For example, if a file is named "DWC.D1.QUOTES.29.11.2017", it contains:
 
-1) Data for DARWIN DWC.4.20
+1) Data for DARWIN $DWC
 2) Data Sensitivity / Timeframe is D1 (M1 = 1-Minute, D1 = Daily)
 3) Type of data (QUOTES or SCORES)
-4) Contains data up to the 6th of July, 2017.
+4) Contains data up to the 29th of November, 2017.
 
-Currently, SCORES are only available with Daily (D1) precision.
+**Please note:**
+1) Data in 1-minute precision for DARWIN $DWC is only available from April 02, 2017 onwards.
+2) SCORES data will be made available in future releases.
