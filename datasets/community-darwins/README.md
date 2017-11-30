@@ -43,5 +43,5 @@ For example, if a file is named "DWC.D1.QUOTES.29.11.2017", it contains:
 4) Contains data up to the 29th of November, 2017.
 
 **Please note:**
-1) Data in 1-minute precision for DARWIN $DWC is only available from April 02, 2017 onwards.
+1) Data in 1-minute precision for DARWIN $DWC is only available from 21st of May, 2017 onwards.
 2) SCORES data will be made available in future releases.
