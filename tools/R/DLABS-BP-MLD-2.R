@@ -43,18 +43,13 @@ pacman::p_load(char = libs.vector,
 
 # 2) Importing datasets from GitHub
 
-DWC.M1.QUOTES.dt <- fread("DWC.M1.QUOTES.29.12.2017.csv", colClasses="numeric")
+DWC.M1.QUOTES.29.12.2017.dt <- fread("DWC.M1.QUOTES.29.12.2017.csv", colClasses="numeric")
 
 #####
 
 # 3) Initial data preparation, timezone localization & best practices
 
-# Confirm data types
-class(DWC.M1.QUOTES.dt$timestamp)
-class(DWC.M1.QUOTES.dt$quote)
-
-# Localize numeric timestamps to POSIXct (UTC)
-DWC.M1.QUOTES.dt$timestamp <- anytime(DWC.M1.QUOTES.dt$timestamp, tz="UTC")
+# See blog post
 
 #####
 
