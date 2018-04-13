@@ -1,11 +1,11 @@
 //+------------------------------------------------------------------+
-//|                                         DLabs_TickData_ToCSV.mq5 |
+//|                                DLabs_TickData_ToCSV_MT5_v2.0.mq5 |
 //|                                   Copyright 2018, Darwinex Labs. |
 //|                         https://blog.darwinex.com/category/labs/ |
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2018, Darwinex Labs."
 #property link      "https://blog.darwinex.com/category/labs/"
-#property version   "1.00"
+#property version   "2.00"
 #property indicator_chart_window
 
 // Variables
