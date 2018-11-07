@@ -99,7 +99,9 @@ class DWX_Tick_Data():
                 print('\n[SUCCESS] {} tick data for {} (hour {}) stored in self._asset_db dict object.\n'.format(_asset, _date, _hour))
         
         # Case: if file not found
-        except Exception:
-            print('\n[ERROR] File: {} doesn\'t exist on tick data server.\n'.format(_file))
+        except Exception as ex:
+            _exstr = "Exception Type {0}. Args:\n{1!r}"
+            _msg = _exstr.format(type(ex).__name__, ex.args)
+            print(_msg)
     
     #########################################################################
