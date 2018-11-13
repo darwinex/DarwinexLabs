@@ -3,7 +3,7 @@
 """
 Created on Mon Oct 29 17:24:20 2018
 
-Script: dwx_tickdata_download.py
+Script: dwx_tickdata_download.py (Python 3)
 --
 Downloads tick data from the Darwinex tick data server. This code demonstrates
 how to download data for one specific date/hour combination, but can be 
