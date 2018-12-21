@@ -53,8 +53,8 @@ Their interests are aligned with ours, as well as those of fellow traders, pooli
 			
 ## Trading Technology
 
-We offer traders a range of platforms, access to our liquidity via FIX and a proprietary API offering (DARWIN API) to trade DARWIN assets on our Exchange.
+We offer traders a range of platforms, **access to our liquidity via FIX and a proprietary API offering (DARWIN API)** to trade DARWIN assets on our Exchange.
 
-We strive to deliver the best, most competitive execution conditions at all times, and 100% DMA/STP access to the FX, Stock, Commodity, Index and Crypto CFD markets.
+We strive to deliver the best, **most competitive execution conditions** at all times, and **100% DMA/STP** access to the **FX, Stock, Commodity, Index and Crypto CFD markets**.
 
 ## [Click here for Execution Conditions, Assets & Spreads](https://www.darwinex.com/executionconditions?utm_source=github&utm_medium=main-page&utm_content=intro-bottom)
