@@ -55,4 +55,4 @@ We offer traders a range of platforms, **access to our liquidity via FIX and a p
 
 We strive to deliver the best, **most competitive execution conditions** at all times, and **100% DMA/STP** access to the **FX, Stock, Commodity, Index and Crypto CFD markets**.
 
-## [Click here for Execution Conditions, Assets & Spreads](https://www.darwinex.com/executionconditions?utm_source=github&utm_medium=main-page&utm_content=intro-bottom)
+## [Click here for execution conditions, platforms, assets & spreads](https://www.darwinex.com/executionconditions?utm_source=github&utm_medium=main-page&utm_content=intro-bottom)
