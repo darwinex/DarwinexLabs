@@ -3,11 +3,9 @@
 
 ## Who we are
 
-Darwinex is a **Broker, Asset Manager and Technology Provider**, authorized and regulated by the Financial Conduct Authority (FCA) in the United Kingdom. 
+Founded in 2012, Darwinex is a **Broker, Asset Manager and Technology Provider**, authorized and regulated by the Financial Conduct Authority (FCA) in the United Kingdom. 
 
 The **Darwinex® trademark** and the www.darwinex.com domain are owned by **Tradeslide Trading Tech Limited**, a company duly authorised and regulated by the **Financial Conduct Authority (FCA) in the United Kingdom with FRN 586466**.
-
-Founded in 2012, we employ more than 40 across our London headquarters and our development office in Spain.	
 		
 ## What we do
 
