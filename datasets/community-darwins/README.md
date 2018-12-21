@@ -2,7 +2,7 @@
 
 This flat-file repository of DARWIN data has been taken offline. Please contact info@darwinex.com to request DARWIN API access instead.
 
-# --
+#
 
 Community Darwins are created by Darwinex Labs, quantitatively leveraging community behaviour.
 
