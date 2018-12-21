@@ -1,3 +1,9 @@
+# Update (as of December 21, 2018)
+
+This flat-file repository of DARWIN data has been taken offline. Please contact info@darwinex.com to request DARWIN API access instead.
+
+# --
+
 Community Darwins are created by Darwinex Labs, quantitatively leveraging community behaviour.
 
 Community behaviour is the Darwinex community's intellectual property. Therefore, to protect this intellectual property, Community Darwins are only available to the Darwinex Community for investment.
