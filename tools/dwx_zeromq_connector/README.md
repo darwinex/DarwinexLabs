@@ -266,5 +266,5 @@ Output:
 1. DWX_MTX_SEND_MARKETDATA_REQUEST_(self, _symbol, _timeframe, _start, _end)
 1. DWX_MTX_SEND_COMMAND_(self, _action, _type, _symbol, _price, _SL, _TP, _comment, _lots, _magic, _ticket)
 1. DWX_MTX_SUBSCRIBE_MARKETDATA_(self, _symbol, _string_delimiter=';')
-1. DWX_MTX_UNSUBSCRIBE_MARKETDATA(self, _symbol)
+1. DWX_MTX_UNSUBSCRIBE_MARKETDATA_(self, _symbol)
 1. DWX_MTX_UNSUBSCRIBE_ALL_MARKETDATA_REQUESTS_(self)
