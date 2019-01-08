@@ -1,7 +1,7 @@
 
 # DWX ZeroMQ Connector (Python 3 to MetaTrader 4)
 
-## (latest version: 2.0.1)
+# Version: 2.0.1
 
 ## Table of Contents
 * [Introduction](#introduction)
