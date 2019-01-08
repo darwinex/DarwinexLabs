@@ -73,11 +73,14 @@ For your convenience, files from the last three items above have been included i
 1. Simply modify the Publish_Symbols[] aarray's contents to add/remove required symbols as necessary and re-compile. 
 1. The default list of symbols is:
 
-```
-string Publish_Symbols[7] = {
-   "EURUSD","GBPUSD","USDJPY","USDCAD","AUDUSD","NZDUSD","USDCHF"
-};
-```
+	```
+	string Publish_Symbols[7] = {
+	   "EURUSD","GBPUSD","USDJPY","USDCAD","AUDUSD","NZDUSD","USDCHF"
+	};
+	```
+	![MetaTrader Publishing Tick Data 1](v2.0.1/resources/images/ZeroMQ_Server_Publishing_Symbol_Data.gif)
+	
+	![MetaTrader Publishing Tick Data 2](v2.0.1/resources/images/InAction_ZeroMQ_Server_Publishing_Symbol_Data.gif)
 
 ## Example Usage
 
