@@ -1,4 +1,7 @@
 //+------------------------------------------------------------------+
+//|                                               Status: DEPRECATED |
+//| Please visit DarwinexLabs/tree/master/tools/dwx_zeromq_connector |
+//|                                                                  |
 //|                                       ZeroMQ_MT4_EA_Template.mq4 |
 //|                                    Copyright 2017, Darwinex Labs |
 //|                                        https://www.darwinex.com/ |
