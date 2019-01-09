@@ -1,5 +1,5 @@
 //+--------------------------------------------------------------+
-//|     DWX_ZeroMQ_Server_v2.0.1.mq4
+//|     DWX_ZeroMQ_Server_v2.0.1_RC8.mq4
 //|     @author: Darwinex Labs (www.darwinex.com)
 //|    
 //|     Copyright (c) 2017-2019, Darwinex. All rights reserved.
