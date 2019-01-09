@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Status: DEPRECATED
-Please visit DarwinexLabs/tree/master/tools/dwx_zeromq_connector |
+Please visit DarwinexLabs/tree/master/tools/dwx_zeromq_connector
 
 Created on Thu Aug 24 16:48:05 2017
 @author: Darwinex Labs (www.darwinex.com)
