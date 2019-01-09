@@ -63,13 +63,15 @@ For your convenience, files from the last three items above have been included i
 1. Download and unzip **mql-zmq-master.zip** (by GitHub author @dingmaotu)
 1. Copy the contents of **mql-zmq-master/Include/Mql** and **mql-zmq-master/Include/Zmq** into your MetaTrader installation's **MQL4/Include** directory as-is. Your **MQL4/Include** directory should now have two additional folders "Mql" and "Zmq".
 1. Copy **libsodium.dll** and **libzmq.dll** from **mql-zmq-master/Library/MT4** to your MetaTrader installation's **MQL4/Libraries** directory.
-1. Download **DWX_ZeroMQ_Server_v2.0.8.mq4** and place it inside your MetaTrader installation's **MQL4/Experts** directory.
-1. Finally, download **DWX_ZeroMQ_Connector_v1_0_8.py**.
+1. Download **DWX_ZeroMQ_Server_v2.0.1_RCx.mq4** and place it inside your MetaTrader installation's **MQL4/Experts** directory.
+1. Finally, download **DWX_ZeroMQ_Connector_v2_0_1_RCx.py**.
+
+In the filenames above and below, the "x" in **_RCx** refers to the current release candidate for this version, mentioned at the beginning of this README.
 
 ## Configuration
 
 1. After completing the steps above, terminate and restart MetaTrader 4.
-1. Open any new chart, e.g. EUR/USD M, then drag and drop **DWX_ZeroMQ_Server_v2.0.8**.
+1. Open any new chart, e.g. EUR/USD M, then drag and drop **DWX_ZeroMQ_Server_v2.0.1_RCx**.
 1. Switch to the EA's Inputs tab and customize values as necessary:
 
     ![EA Inputs](resources/images/expert-inputs.png)
