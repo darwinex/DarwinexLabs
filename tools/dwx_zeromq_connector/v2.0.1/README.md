@@ -336,7 +336,7 @@ Output:
 * Points
 
 2) **How do I access the JSON that MetaTrader sends back to Python?**
-* Each time you send a command from Python, output JSON from MetaTrader is stored in the DWX_ZeroMQ_Connector object's **_ thread_data** variable. You may modify this behaviour by editing the Python script to suit your requirements.
+* Each time you send a command from Python, output JSON from MetaTrader is stored in the DWX_ZeroMQ_Connector object's **_ thread_data_output** variable. You may modify this behaviour by editing the Python script to suit your requirements.
 
 3) **Can I use this for HFT trading?**
 * No. Please ensure there is at least a 10 millisecond delay between commands sent to MetaTrader.
