@@ -332,19 +332,19 @@ Output:
 
 ## FAQ
 
-1. **What does the MetaTrader 4 Server EA expect stop losses (SL) & take profits (TP) to be specified in, PIPS or POINTS?**
+1) **What does the MetaTrader 4 Server EA expect stop losses (SL) & take profits (TP) to be specified in, PIPS or POINTS?**
 * Points
 
-1. **How do I access the JSON that MetaTrader sends back to Python?**
+2) **How do I access the JSON that MetaTrader sends back to Python?**
 * Each time you send a command from Python, output JSON from MetaTrader is stored in the DWX_ZeroMQ_Connector object's **_ thread_data** variable. You may modify this behaviour by editing the Python script to suit your requirements.
 
-1. **Can I use this for HFT trading?**
+3) **Can I use this for HFT trading?**
 * No. Please ensure there is at least a 10 millisecond delay between commands sent to MetaTrader.
 
-1. **I have a large number of trades open in MetaTrader and when I run ._DWX_GET_OPEN_TRADES_ I don't get any output sent back.**
+4) **I have a large number of trades open in MetaTrader and when I run ._DWX_GET_OPEN_TRADES_ I don't get any output sent back.**
 * Try implementing pagination in both the Python and MQL scripts. This is something we have planned for future releases to offset potential transmission issues when requesting large amounts of data from MetaTrader.
 
-1. **I requested historical data for a long date-range from MetaTrader, but got nothing back.**
+5) **I requested historical data for a long date-range from MetaTrader, but got nothing back.**
 * Try implementing pagination in both the Python and MQL scripts. This is something we have planned for future releases to offset potential transmission issues when requesting large amounts of data from MetaTrader.
 
 ## License
