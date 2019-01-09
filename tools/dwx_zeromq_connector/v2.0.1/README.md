@@ -266,6 +266,7 @@ Output:
 1. DWX_MTX_CLOSE_TRADE_BY_TICKET_(self, _ticket)
 1. DWX_MTX_CLOSE_PARTIAL_BY_TICKET_(self, _ticket, _lots)
 1. DWX_MTX_CLOSE_TRADES_BY_MAGIC_(self, _magic)
+1. DWX_MTX_CLOSE_ALL_TRADES_(self)
 1. DWX_MTX_GET_ALL_OPEN_TRADES_(self)
 1. generate_default_order_dict(self)
 1. generate_default_data_dict(self)
