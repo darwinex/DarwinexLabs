@@ -347,6 +347,9 @@ Output:
 5) **I requested historical data for a long date-range from MetaTrader, but got nothing back.**
 * Try implementing pagination in both the Python and MQL scripts. This is something we have planned for future releases to offset potential transmission issues when requesting large amounts of data from MetaTrader.
 
+6) **What is the latest version and release candidate?**
+* v2.0.1_RC8
+
 ## License
 
 BSD 3-Clause License
