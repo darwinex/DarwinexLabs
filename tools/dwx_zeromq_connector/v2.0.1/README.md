@@ -17,6 +17,8 @@
 In this project, we present a technique employing ZeroMQ (an Open Source, Asynchronous Messaging Library and Concurrency Framework) for building a basic – but easily extensible – high performance bridge between external (non-MQL) programming languages and MetaTrader 4.
 
 ### IMPORTANT NOTE: Any code provided and/or referenced in this repository is NOT meant to be used "as-is". Users must treat all code as educational content that requires modification / incorporation into existing works, as per their individual requirements.
+
+### This release has been tested on: Windows 10 Professional, MetaTrader 4 Build 1170 (20 Dec 2018).
 	
 **Reasons for writing this post:**
 
