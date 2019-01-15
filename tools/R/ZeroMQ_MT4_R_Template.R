@@ -1,5 +1,6 @@
 #+------------------------------------------------------------------+
-#|                                          ZeroMQ_MT4_R_Template.R |
+#|                                          ZeroMQ_MT4_R_Template.R | 
+#|                                               Status: DEPRECATED |
 #|                                    Copyright 2017, Darwinex Labs |
 #|                                        https://www.darwinex.com/ |
 #+------------------------------------------------------------------+
