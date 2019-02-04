@@ -1,0 +1,8 @@
+datasets/* linguist-vendored
+research/* linguist-vendored
+webinars/* linguist-vendored
+tools/MQL4/* linguist-vendored
+tools/MQL5/* linguist-vendored
+tools/R/* linguist-vendored
+tools/Cpp/* linguist-vendored
+tools/Java/* linguist-vendored
