@@ -57,7 +57,7 @@ class DWX_MT_TO_PYTHON():
 
     def __init__(self, _verbose=False,
                  _type='normal',
-                 _filename='C://Users/Satch/Desktop/PLX_ALL_NormalStatement.htm'):
+                 _filename='<INSERT_PATH_TO_HTML_REPORT_HERE>'):
         
         #############################
         # MetaTrader HTML Variables #
@@ -120,7 +120,7 @@ class DWX_MT_TO_PYTHON():
     ##########################################################################
     
     def _statement_to_dataframe_(self, _type='normal',
-                                 _filename='C://Users/Satch/Desktop/PLX_ALL_NormalStatement.htm'):
+                                 _filename='<INSERT_PATH_TO_HTML_REPORT_HERE>'):
      
         # Check if input type is correct, else return error
         if _type not in ['backtest','normal','detailed']:
