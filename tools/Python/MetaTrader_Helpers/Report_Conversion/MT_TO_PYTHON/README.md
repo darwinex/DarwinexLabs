@@ -35,12 +35,20 @@ corresponding variables in the script will require adjustments accordingly.
     
 ## Usage:
     
+    >> _mt = DWX_MT_TO_PYTHON(_verbose=False,
+                              _type='normal',
+                              _filename='<INSERT_PATH_TO_FILE_HERE>')
+                              
     1) Set _type = 'normal' for Account Histories saves as "Normal" Reports
     2) Set _type = 'detailed' for Account Histories saves as "Detailed" Reports
     3) Set _type = 'backtest' for Strategy Tester reports
     
     By default, dataframes generated are stored inside a class variable
     called '_statement_df'. Set _verbose to True to print this upon generation.
+    
+    >> print(_mt._statement_df)
+    
+    ![Example MetaTrader to Pandas Conversion](/images/mt_to_df_example.png)
     
 ## Found this code useful?
 
