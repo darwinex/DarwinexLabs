@@ -47,8 +47,8 @@ corresponding variables in the script will require adjustments accordingly.
     called '_statement_df'. Set _verbose to True to print this upon generation.
     
     >> print(_mt._statement_df)
-    
-    ![Example MetaTrader to Pandas Conversion](/images/mt_to_df_example.png)
+
+![Example MetaTrader to Pandas Conversion](images/mt_to_df_example.png)
     
 ## Found this code useful?
 
