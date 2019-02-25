@@ -454,6 +454,11 @@ int DWX_OpenOrder(string _symbol, int _type, double _lots, double _price, double
    
    zmq_ret = zmq_ret + "'_action': 'EXECUTION'";
    
+   if(_lots > MaximumLotSize) {
+      zmq_ret = zmq_ret + ", " + "'_response': 'LOT_SIZE_ERROR', 'response_value': 'MAX_LOT_SIZE_EXCEEDED'";
+      return(-1);
+   }
+   
    double sl = _SL;
    double tp = _TP;
   
