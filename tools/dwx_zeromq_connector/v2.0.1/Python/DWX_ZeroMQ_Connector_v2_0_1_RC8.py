@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    DWX_ZeroMQ_Connector_v1_0_8.py
+    DWX_ZeroMQ_Connector_v2_0_1_RC8.py
     --
     @author: Darwinex Labs (www.darwinex.com)
     
@@ -94,7 +94,7 @@ class DWX_ZeroMQ_Connector():
         
         # Thread returns the most recently received DATA block here
         self._thread_data_output = None
-                
+        
     ##########################################################################
     
     """
@@ -326,14 +326,12 @@ class DWX_ZeroMQ_Connector():
                     # If data is returned, store as pandas Series
                     if msg != '' and msg != None:
                         
-                        try:
-                            
+                        try: 
                             _data = eval(msg)
                             
-                            # Insert your own handling logic here
                             self._thread_data_output = _data
                             print(_data) # default logic
-                            
+                                
                         except Exception as ex:
                             _exstr = "Exception Type {0}. Args:\n{1!r}"
                             _msg = _exstr.format(type(ex).__name__, ex.args)
