@@ -252,10 +252,12 @@ void InterpretZmqMessage(Socket &pSocket, string &compArray[]) {
       switch_action = 6;
    if(compArray[0] == "TRADE" && compArray[1] == "GET_OPEN_TRADES")
       switch_action = 7;
+   /*
    if(compArray[0] == "TRADE" && compArray[1] == "GET_CLOSED_TRADES")
       switch_action = 8;
+   */
    if(compArray[0] == "DATA")
-      switch_action = 9;
+      switch_action = 8;
    
    string zmq_ret = "";
    string ret = "";
