@@ -326,21 +326,13 @@ class DWX_ZeroMQ_Connector():
                     # If data is returned, store as pandas Series
                     if msg != '' and msg != None:
                         
-                        _data = eval(msg)
-                        
                         try:
                             
-                            if _data['_action'] == 'DATA':
-                                self._thread_data_output = Series(
-                                        data=[_v for _v in _data['_data'].values()], 
-                                        index=[Timestamp(_k) for _k in _data['_data'].keys()])
-                                
-                                print(self._thread_data_output)
-                                
-                            else:
-                                # Insert your own handling logic here
-                                self._thread_data_output = _data
-                                print(_data) # default logic
+                            _data = eval(msg)
+                            
+                            # Insert your own handling logic here
+                            self._thread_data_output = _data
+                            print(_data) # default logic
                             
                         except Exception as ex:
                             _exstr = "Exception Type {0}. Args:\n{1!r}"
