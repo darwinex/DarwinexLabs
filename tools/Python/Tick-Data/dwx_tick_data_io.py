@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     Sample code:
-	dwx_tick_data_io.py
+    dwx_tick_data_io.py
     --
     @author: Darwinex Labs (www.darwinex.com)
     
