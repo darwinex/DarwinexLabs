@@ -78,14 +78,26 @@ int OnInit()
    // Send responses to PULL_PORT that client is listening on.
    Print("[PUSH] Binding MT4 Server to Socket on Port " + IntegerToString(PULL_PORT) + "..");
    pushSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PULL_PORT));
+   pushSocket.setReceiveHighWaterMark(100);
+   pushSocket.setSendHighWaterMark(100);
+   pushSocket.setLinger(0);
    
    // Receive commands from PUSH_PORT that client is sending to.
    Print("[PULL] Binding MT4 Server to Socket on Port " + IntegerToString(PUSH_PORT) + "..");   
    pullSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUSH_PORT));
+   pullSocket.setReceiveHighWaterMark(100);
+   pullSocket.setSendHighWaterMark(100);
+   pullSocket.setLinger(0);
    
-   // Send new market data to PUB_PORT that client is subscribed to.
-   Print("[PUB] Binding MT4 Server to Socket on Port " + IntegerToString(PUB_PORT) + "..");
-   pubSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
+   if (Publish_MarketData == TRUE)
+   {
+      // Send new market data to PUB_PORT that client is subscribed to.
+      Print("[PUB] Binding MT4 Server to Socket on Port " + IntegerToString(PUB_PORT) + "..");
+      pubSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
+      pubSocket.setReceiveHighWaterMark(100);
+      pubSocket.setSendHighWaterMark(100);
+      pubSocket.setLinger(0);
+   }
    
 //---
    return(INIT_SUCCEEDED);
@@ -105,8 +117,11 @@ void OnDeinit(const int reason)
    Print("[PULL] Unbinding MT4 Server from Socket on Port " + IntegerToString(PUSH_PORT) + "..");
    pullSocket.unbind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUSH_PORT));
    
-   Print("[PUB] Unbinding MT4 Server from Socket on Port " + IntegerToString(PUB_PORT) + "..");
-   pubSocket.unbind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
+   if (Publish_MarketData == TRUE)
+   {
+      Print("[PUB] Unbinding MT4 Server from Socket on Port " + IntegerToString(PUB_PORT) + "..");
+      pubSocket.unbind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
+   }
    
 }
 
@@ -146,7 +161,10 @@ void OnTimer()
    */
    
    // Get client's response, but don't wait.
-   pullSocket.recv(request,true);
+   // pullSocket.recv(request,true);
+   
+   // Wait 
+   pullSocket.recv(request,false);
    
    // MessageHandler() should go here.   
    ZmqMsg reply = MessageHandler(request);
@@ -505,7 +523,7 @@ int DWX_OpenOrder(string _symbol, int _type, double _lots, double _price, double
             }
          }
 
-         Sleep(100);
+         Sleep(MILLISECOND_TIMER);
       }
 
       zmq_ret = zmq_ret + ", '_response': 'ERROR_SETTING_SL_TP'";
@@ -569,7 +587,7 @@ bool DWX_CloseAtMarket(double size, string &zmq_ret) {
          }
       }
 
-      Sleep(100);
+      Sleep(MILLISECOND_TIMER);
    }
 
    return(false);
@@ -756,7 +774,7 @@ void DWX_GetOpenOrders(string &zmq_ret) {
       
          zmq_ret = zmq_ret + IntegerToString(OrderTicket()) + ": {";
          
-         zmq_ret = zmq_ret + "'_magic': " + IntegerToString(OrderMagicNumber()) + ", '_symbol': '" + OrderSymbol() + "', '_lots': " + DoubleToString(OrderLots()) + ", '_type': " + IntegerToString(OrderType()) + ", '_open_price': " + DoubleToString(OrderOpenPrice()) + ", '_SL': " + DoubleToString(OrderStopLoss()) + ", '_TP': " + DoubleToString(OrderTakeProfit()) + ", '_pnl': " + DoubleToString(OrderProfit());
+         zmq_ret = zmq_ret + "'_magic': " + IntegerToString(OrderMagicNumber()) + ", '_symbol': '" + OrderSymbol() + "', '_lots': " + DoubleToString(OrderLots()) + ", '_type': " + IntegerToString(OrderType()) + ", '_open_price': " + DoubleToString(OrderOpenPrice()) + ", '_open_time': '" + OrderOpenTime() + "', '_SL': " + DoubleToString(OrderStopLoss()) + ", '_TP': " + DoubleToString(OrderTakeProfit()) + ", '_pnl': " + DoubleToString(OrderProfit()) + ", '_comment': '" + OrderComment() + "'";
          
          if (i != 0)
             zmq_ret = zmq_ret + "}, ";
