@@ -15,7 +15,7 @@
 
 # IMPORT zmq library
 import zmq
-from pandas import Timestamp, Series
+from pandas import Timestamp
 from threading import Thread
 
 class DWX_ZeroMQ_Connector():
@@ -30,7 +30,8 @@ class DWX_ZeroMQ_Connector():
                  _PUSH_PORT=32768,           # Port for Sending commands
                  _PULL_PORT=32769,           # Port for Receiving responses
                  _SUB_PORT=32770,            # Port for Subscribing for prices
-                 _delimiter=';'):           # String delimiter           
+                 _delimiter=';',
+                 _verbose=False):           # String delimiter           
     
         # Strategy Status (if this is False, ZeroMQ will not listen for data)
         self._ACTIVE = True
@@ -59,7 +60,7 @@ class DWX_ZeroMQ_Connector():
         self._PUSH_SOCKET = self._ZMQ_CONTEXT.socket(zmq.PUSH)
         self._PULL_SOCKET = self._ZMQ_CONTEXT.socket(zmq.PULL)
         self._SUB_SOCKET = self._ZMQ_CONTEXT.socket(zmq.SUB)
-    
+        
         # Bind PUSH Socket to send commands to MetaTrader
         self._PUSH_SOCKET.connect(self._URL + str(self._PUSH_PORT))
         print("[INIT] Ready to send commands to METATRADER (PUSH): " + str(self._PUSH_PORT))
@@ -94,6 +95,9 @@ class DWX_ZeroMQ_Connector():
         
         # Thread returns the most recently received DATA block here
         self._thread_data_output = None
+        
+        # Verbosity
+        self._verbose = _verbose
         
     ##########################################################################
     
@@ -309,8 +313,7 @@ class DWX_ZeroMQ_Connector():
     """
     
     def _DWX_ZMQ_Poll_Data_(self, 
-                           string_delimiter=';',
-                           _verbose=False):
+                           string_delimiter=';'):
         
         while self._ACTIVE:
             
@@ -330,7 +333,8 @@ class DWX_ZeroMQ_Connector():
                             _data = eval(msg)
                             
                             self._thread_data_output = _data
-                            print(_data) # default logic
+                            if self._verbose:
+                                print(_data) # default logic
                                 
                         except Exception as ex:
                             _exstr = "Exception Type {0}. Args:\n{1!r}"
@@ -355,7 +359,7 @@ class DWX_ZeroMQ_Connector():
                         _bid, _ask = _data.split(string_delimiter)
                         _timestamp = str(Timestamp.now('UTC'))[:-6]
                         
-                        if _verbose:
+                        if self._verbose:
                             print("\n[" + _symbol + "] " + _timestamp + " (" + _bid + "/" + _ask + ") BID/ASK")
                     
                         # Update Market Data DB
