@@ -14,7 +14,7 @@
 """
 
 # IMPORT zmq library
-import zmq
+import zmq, time
 from pandas import Timestamp
 from threading import Thread
 
@@ -115,7 +115,12 @@ class DWX_ZeroMQ_Connector():
     Function to send commands to MetaTrader (PUSH)
     """
     def remote_send(self, _socket, _data):
-        _socket.send_string(_data, zmq.DONTWAIT)
+        
+        try:
+            _socket.send_string(_data, zmq.DONTWAIT)
+        except zmq.error.Again:
+            print("\nResource timeout.. please try again.")
+            time.sleep(0.000000001)
       
     ##########################################################################
     
@@ -123,8 +128,15 @@ class DWX_ZeroMQ_Connector():
     Function to retrieve data from MetaTrader (PULL or SUB)
     """
     def remote_recv(self, _socket):
-        msg = _socket.recv_string(zmq.DONTWAIT)
-        return msg
+        
+        try:
+            msg = _socket.recv_string(zmq.DONTWAIT)
+            return msg
+        except zmq.error.Again:
+            print("\nResource timeout.. please try again.")
+            time.sleep(0.000001)
+            
+        return None
         
     ##########################################################################
     
