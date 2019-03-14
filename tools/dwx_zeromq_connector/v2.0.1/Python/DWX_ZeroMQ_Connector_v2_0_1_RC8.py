@@ -14,7 +14,6 @@
 """
 
 # IMPORT zmq library
-# import zmq, time
 import zmq
 from time import sleep
 from pandas import DataFrame, Timestamp
