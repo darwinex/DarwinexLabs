@@ -80,19 +80,19 @@ int OnInit()
    // Send responses to PULL_PORT that client is listening on.
    Print("[PUSH] Binding MT4 Server to Socket on Port " + IntegerToString(PULL_PORT) + "..");
    pushSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PULL_PORT));
-   /*
+   
    pushSocket.setReceiveHighWaterMark(1);
    pushSocket.setSendHighWaterMark(1);
-   */
+   
    pushSocket.setLinger(0);
    
    // Receive commands from PUSH_PORT that client is sending to.
    Print("[PULL] Binding MT4 Server to Socket on Port " + IntegerToString(PUSH_PORT) + "..");   
    pullSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUSH_PORT));
-   /*
+   
    pullSocket.setReceiveHighWaterMark(1);
    pullSocket.setSendHighWaterMark(1);
-   */
+   
    pullSocket.setLinger(0);
    
    if (Publish_MarketData == TRUE)
@@ -101,8 +101,8 @@ int OnInit()
       Print("[PUB] Binding MT4 Server to Socket on Port " + IntegerToString(PUB_PORT) + "..");
       pubSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
       /*
-      pubSocket.setReceiveHighWaterMark(100);
-      pubSocket.setSendHighWaterMark(100);
+      pubSocket.setReceiveHighWaterMark(1);
+      pubSocket.setSendHighWaterMark(1);
       */
       pubSocket.setLinger(0);
    }
@@ -116,8 +116,6 @@ int OnInit()
 void OnDeinit(const int reason)
 {
 //---
-
-   EventKillTimer();
     
    Print("[PUSH] Unbinding MT4 Server from Socket on Port " + IntegerToString(PULL_PORT) + "..");
    pushSocket.unbind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PULL_PORT));
@@ -134,6 +132,8 @@ void OnDeinit(const int reason)
    // Shutdown ZeroMQ Context
    context.shutdown();
    context.destroy(0);
+   
+   EventKillTimer();
 }
 
 //+------------------------------------------------------------------+
@@ -171,18 +171,23 @@ void OnTimer()
       Use this OnTimer() function to get and respond to commands
    */
    
-   // Get client's response, but don't wait.
-   pullSocket.recv(request,true);
+   // Get client's response, but don't block.
+   pullSocket.recv(request, true);
    
-   // Wait 
-   // pullSocket.recv(request,false);
-   
-   // MessageHandler() should go here.   
-   ZmqMsg reply = MessageHandler(request);
-   
-   // socket.send(reply) should go here.
-   pushSocket.send(reply);
-   
+   if (request.size() > 0)
+   {
+      // Wait 
+      // pullSocket.recv(request,false);
+      
+      // MessageHandler() should go here.   
+      ZmqMsg reply = MessageHandler(request);
+      
+      // Send response, and block
+      // pushSocket.send(reply);
+      
+      // Send response, but don't block
+      pushSocket.send(reply, true);
+   }
 }
 //+------------------------------------------------------------------+
 
