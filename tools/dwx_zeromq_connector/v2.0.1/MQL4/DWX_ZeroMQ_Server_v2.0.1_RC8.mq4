@@ -81,9 +81,7 @@ int OnInit()
    Print("[PUSH] Binding MT4 Server to Socket on Port " + IntegerToString(PULL_PORT) + "..");
    pushSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PULL_PORT));
    
-   pushSocket.setReceiveHighWaterMark(1);
    pushSocket.setSendHighWaterMark(1);
-   
    pushSocket.setLinger(0);
    
    // Receive commands from PUSH_PORT that client is sending to.
@@ -91,7 +89,6 @@ int OnInit()
    pullSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUSH_PORT));
    
    pullSocket.setReceiveHighWaterMark(1);
-   pullSocket.setSendHighWaterMark(1);
    
    pullSocket.setLinger(0);
    
@@ -100,10 +97,7 @@ int OnInit()
       // Send new market data to PUB_PORT that client is subscribed to.
       Print("[PUB] Binding MT4 Server to Socket on Port " + IntegerToString(PUB_PORT) + "..");
       pubSocket.bind(StringFormat("%s://%s:%d", ZEROMQ_PROTOCOL, HOSTNAME, PUB_PORT));
-      /*
-      pubSocket.setReceiveHighWaterMark(1);
       pubSocket.setSendHighWaterMark(1);
-      */
       pubSocket.setLinger(0);
    }
    
@@ -150,7 +144,6 @@ void OnTick()
       {
          // Python clients can subscribe to a price feed by setting
          // socket options to the symbol name. For example:
-         // _SUB_SOCKET.setsockopt_string(zmq.SUBSCRIBE, "SYMBOL")
          
          string _tick = GetBidAsk(Publish_Symbols[s]);
          Print("Sending " + Publish_Symbols[s] + " " + _tick + " to PUB Socket");
@@ -286,10 +279,6 @@ void InterpretZmqMessage(Socket &pSocket, string &compArray[]) {
       switch_action = 6;
    if(compArray[0] == "TRADE" && compArray[1] == "GET_OPEN_TRADES")
       switch_action = 7;
-   /*
-   if(compArray[0] == "TRADE" && compArray[1] == "GET_CLOSED_TRADES")
-      switch_action = 8;
-   */
    if(compArray[0] == "DATA")
       switch_action = 8;
    
@@ -605,7 +594,6 @@ bool DWX_CloseAtMarket(double size, string &zmq_ret) {
          }
       }
 
-      Sleep(MILLISECOND_TIMER);
    }
 
    return(false);
@@ -835,7 +823,6 @@ int DWX_IsTradeAllowed(int MaxWaiting_sec, string &zmq_ret) {
                 return(1);
             }
             
-            //Sleep(100);
           }
     } else {
         return(1);
