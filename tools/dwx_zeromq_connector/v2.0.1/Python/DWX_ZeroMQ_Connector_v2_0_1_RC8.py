@@ -14,7 +14,9 @@
 """
 
 # IMPORT zmq library
-import zmq, time
+# import zmq, time
+import zmq
+from time import sleep
 from pandas import DataFrame, Timestamp
 from threading import Thread
 
@@ -120,7 +122,7 @@ class DWX_ZeroMQ_Connector():
             _socket.send_string(_data, zmq.DONTWAIT)
         except zmq.error.Again:
             print("\nResource timeout.. please try again.")
-            time.sleep(0.000000001)
+            sleep(0.000000001)
       
     ##########################################################################
     
@@ -160,7 +162,7 @@ class DWX_ZeroMQ_Connector():
             return msg
         except zmq.error.Again:
             print("\nResource timeout.. please try again.")
-            time.sleep(0.000001)
+            sleep(0.000001)
             
         return None
         
