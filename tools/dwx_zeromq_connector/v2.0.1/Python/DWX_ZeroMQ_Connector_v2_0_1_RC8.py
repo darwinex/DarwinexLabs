@@ -15,7 +15,7 @@
 
 # IMPORT zmq library
 import zmq, time
-from pandas import Timestamp
+from pandas import DataFrame, Timestamp
 from threading import Thread
 
 class DWX_ZeroMQ_Connector():
@@ -122,6 +122,32 @@ class DWX_ZeroMQ_Connector():
             print("\nResource timeout.. please try again.")
             time.sleep(0.000000001)
       
+    ##########################################################################
+    
+    def _get_response_(self):
+        return self._thread_data_output
+    
+    ##########################################################################
+    
+    def _set_response_(self, _resp=None):
+        self._thread_data_output = _resp
+    
+    ##########################################################################
+    
+    def _valid_response_(self, _input='zmq'):
+        
+        # Valid data types
+        _types = (dict,DataFrame)
+        
+        # If _input = 'zmq', assume self._zmq._thread_data_output
+        if isinstance(_input, str) and _input == 'zmq':
+            return isinstance(self._get_response_(), _types)
+        else:
+            return isinstance(_input, _types)
+            
+        # Default
+        return False
+    
     ##########################################################################
     
     """
