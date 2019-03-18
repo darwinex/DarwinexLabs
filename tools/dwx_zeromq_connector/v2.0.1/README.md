@@ -314,6 +314,18 @@ Output:
 **
 ```
 
+## Video Tutorials
+
+1. [How to Interface Python/R Trading Strategies with MetaTrader 4](https://www.youtube.com/watch?v=GGOajzvl860)
+
+1. [Algorithmic Trading via ZeroMQ: Trade Execution, Reporting & Management (Python to MetaTrader)](https://youtu.be/3nM0c2kG_Sw)
+
+1. [Algorithmic Trading via ZeroMQ: Subscribing to Market Data (Python to MetaTrader)](https://youtu.be/9EaP_7sSzEI)
+
+1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 1](https://www.youtube.com/watch?v=4MxjFTQHTfw)
+
+1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 2](https://www.youtube.com/watch?v=VtOfF-nhhj8)
+
 ## Available functions:
 
 1. DWX_MTX_NEW_TRADE_(self, _order=None)
@@ -382,15 +394,3 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-## Video Tutorials
-
-1. [How to Interface Python/R Trading Strategies with MetaTrader 4](https://www.youtube.com/watch?v=GGOajzvl860)
-
-1. [Algorithmic Trading via ZeroMQ: Trade Execution, Reporting & Management (Python to MetaTrader)](https://youtu.be/3nM0c2kG_Sw)
-
-1. [Algorithmic Trading via ZeroMQ: Subscribing to Market Data (Python to MetaTrader)](https://youtu.be/9EaP_7sSzEI)
-
-1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 1](https://www.youtube.com/watch?v=4MxjFTQHTfw)
-
-1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 2](https://www.youtube.com/watch?v=VtOfF-nhhj8)
