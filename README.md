@@ -1,4 +1,4 @@
-<a href="https://github.com/darwinex/DarwinexLabs/blob/master/tools/dwx_zeromq_connector/"><img src="https://github.com/darwinex/DarwinexLabs/blob/master/tools/dwx_zeromq_connector/v2.0.1/resources/images/1200x628-twitter-4.jpg" /></a>
+<a href="https://github.com/darwinex/DarwinexLabs/blob/master/tools/dwx_zeromq_connector/"><img src="https://github.com/darwinex/dwx-zeromq-connector/blob/master/resources/images/1200x628-twitter-4.jpg" /></a>
 
 # Darwinex Labs
 **Darwinex Labs** is the Prop Investing Arm &amp; Quant Team @ **Darwinex (www.darwinex.com) - The Open Trader Exchange.**
