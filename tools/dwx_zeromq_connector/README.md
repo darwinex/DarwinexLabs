@@ -1,3 +1,5 @@
+## Important Notice (2019-03-18 12:20 UTC): Future updates to the _DWX_ZeroMQ_Connector_ project will be served in its own dedicated repository here: https://github.com/darwinex/dwx-zeromq-connector
+
 # DWX ZeroMQ Connector  { Python 3 to MetaTrader 4 }
 
 # Latest version: 2.0.1 [(here)](https://github.com/darwinex/DarwinexLabs/tree/master/tools/dwx_zeromq_connector/v2.0.1)
