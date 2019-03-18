@@ -1,4 +1,4 @@
-## Important Notice (2019-03-18 12:20 UTC): Future updates to this project will be served in its own dedicated repository here: https://github.com/darwinex/dwx-zeromq-connector
+## Important Notice (2019-03-18 12:20 UTC): Future updates to the _DWX_ZeroMQ_Connector_ project will be served in its own dedicated repository here: https://github.com/darwinex/dwx-zeromq-connector
 
 <a href="https://github.com/darwinex/dwx-zeromq-connector/"><img src="https://github.com/darwinex/dwx-zeromq-connector/blob/master/resources/images/1200x628-twitter-4.jpg" /></a>
 
