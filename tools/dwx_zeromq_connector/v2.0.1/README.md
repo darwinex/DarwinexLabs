@@ -1,5 +1,3 @@
-
-
 # DWX ZeroMQ Connector  { Python 3 to MetaTrader 4 }
 
 # Version: 2.0.1 (RC8)
@@ -9,6 +7,7 @@
 * [Installation](#installation)
 * [Configuration](#configuration)
 * [Example Usage](#example-usage)
+* [Video Tutorials](#video-tutorials)
 * [Complete list of available functions](#available-functions)
 * [Frequently Asked Questions](#faq)
 * [License](#license)
@@ -384,3 +383,14 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+## Video Tutorials
+
+1. [How to Interface Python/R Trading Strategies with MetaTrader 4](https://www.youtube.com/watch?v=GGOajzvl860)
+
+1. [Algorithmic Trading via ZeroMQ: Trade Execution, Reporting & Management (Python to MetaTrader)](https://youtu.be/3nM0c2kG_Sw)
+
+1. [Algorithmic Trading via ZeroMQ: Subscribing to Market Data (Python to MetaTrader)](https://youtu.be/9EaP_7sSzEI)
+
+1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 1](https://www.youtube.com/watch?v=4MxjFTQHTfw)
+
+1. [Build Algorithmic Trading Strategies with Python & ZeroMQ: Part 2](https://www.youtube.com/watch?v=VtOfF-nhhj8)
