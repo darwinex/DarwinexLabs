@@ -4,6 +4,8 @@ Future updates to the _**DWX_ZeroMQ_Connector**_ project will be served in its o
 
 <a href="https://github.com/darwinex/dwx-zeromq-connector/"><img src="https://github.com/darwinex/dwx-zeromq-connector/blob/master/resources/images/1200x628-twitter-4.jpg" /></a>
 
+## Need help? Join the [Darwinex Collective Slack](https://join.slack.com/t/darwinex-collective/shared_invite/enQtNjg4MjA0ODUzODkyLWFiZWZlMDZjNGVmOGE2ZDBiZGI4ZWUxNjM5YTU0MjZkMTQ2NGZjNGIyN2QxZDY4NjUyZmVlNmU3N2E2NGE1Mjk) for Q&A, debug and more.
+
 # Darwinex Labs
 **Darwinex Labs** is the Prop Investing Arm &amp; Quant Team @ **Darwinex (www.darwinex.com) - The Open Trader Exchange.**
 
