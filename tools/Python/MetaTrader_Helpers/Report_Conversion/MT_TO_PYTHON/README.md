@@ -11,7 +11,7 @@ This script enables traders knowledgable in Python to import
 their Account History and Strategy Tester reports directly into 
 pandas dataframes.
 
-Leverage the capabilities of Python to conduct more meaninful,
+Leverage the capabilities of Python to conduct more meaningful,
 sophisitcated analyses of your track records and backtests.
 
 ## Dependencies:
