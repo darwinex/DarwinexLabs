@@ -39,8 +39,8 @@ corresponding variables in the script will require adjustments accordingly.
                               _type='normal',
                               _filename='<INSERT_PATH_TO_FILE_HERE>')
                               
-    1) Set _type = 'normal' for Account Histories saves as "Normal" Reports
-    2) Set _type = 'detailed' for Account Histories saves as "Detailed" Reports
+    1) Set _type = 'normal' for Account Histories saved as "Normal" Reports
+    2) Set _type = 'detailed' for Account Histories saved as "Detailed" Reports
     3) Set _type = 'backtest' for Strategy Tester reports
     
     By default, dataframes generated are stored inside a class variable
